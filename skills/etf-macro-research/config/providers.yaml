@@ -1,0 +1,25 @@
+providers:
+  - id: fred_graph_csv
+    type: http_csv
+    enabled: true
+    base_url: https://fred.stlouisfed.org/graph/fredgraph.csv
+    notes: public CSV endpoint, no API key
+
+  - id: yahoo_chart_api
+    type: http_json
+    enabled: true
+    base_url: https://query1.finance.yahoo.com/v8/finance/chart
+    notes: public chart endpoint, no API key for basic usage
+
+region_profiles:
+  default: CN
+  supported: [CN, US, GLOBAL]
+  strategy: 中国为主，美国与全球为辅助信号
+
+pipeline:
+  default_region: CN
+  output_file: data/latest_market_snapshot.json
+  report_file: data/latest_report_zh.md
+  script_entry:
+    snapshot: scripts/run_pipeline.py
+    report: scripts/generate_report.py

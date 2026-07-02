@@ -1,0 +1,17 @@
+modules:
+  - id: macro_regime
+    enabled: true
+    weight: 0.30
+    required_metrics: [gdp_nowcast, inflation_trend, policy_rate_direction, liquidity_proxy]
+  - id: cross_asset
+    enabled: true
+    weight: 0.20
+    required_metrics: [equity_momentum_3m, bond_yield_change_3m, credit_spread_change_3m, commodity_momentum_3m, dxy_momentum_3m]
+  - id: industry_prosperity
+    enabled: true
+    weight: 0.30
+    required_metrics: [sector_trend_score_top3_avg, sector_breadth_positive_3m]
+  - id: earnings_quality
+    enabled: true
+    weight: 0.20
+    required_metrics: [corporate_profits_yoy, corporate_profits_qoq, credit_spread_level, unemployment_change_3m, earnings_state_score]

@@ -1,0 +1,17 @@
+{
+  "skill_name": "etf-macro-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "做一份美国市场未来3-6个月ETF分析，给出行业景气与盈利趋势排名。",
+      "expected_output": "包含宏观判断、景气排序、盈利分析和ETF清单",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "做一份全球资产视角的ETF再平衡建议，说明主要风险。",
+      "expected_output": "包含大类资产信号、配置建议、风险控制",
+      "files": []
+    }
+  ]
+}
